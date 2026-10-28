@@ -1,18 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  async rewrites() {
-    // Decap CMS admin UI lives as a static file at public/admin/index.html.
-    // Rewriting both the with- and without-trailing-slash forms directly to
-    // it (instead of redirecting one to the other first) avoids a redirect
-    // loop against Next's own trailing-slash handling — see MEMORY.md.
-    // index.html pins its config.yml fetch to an absolute path, so which
-    // form a visitor lands on doesn't matter for Decap's config load either.
-    return [
-      { source: "/admin", destination: "/admin/index.html" },
-      { source: "/admin/", destination: "/admin/index.html" },
-    ];
-  },
+  // Static export (Hostinger shared hosting — see MEMORY.md 2026-10-29). The
+  // `rewrites()` this project used under Netlify/Next-server hosting is
+  // dropped: output:"export" doesn't support next.config rewrites, and it's
+  // unneeded here anyway — /admin/index.html is a plain public/ static file,
+  // and Apache-style static hosting serves index.html for a directory
+  // request (/admin/) on its own, same as any other folder on the site.
+  output: "export",
 };
 
 export default nextConfig;

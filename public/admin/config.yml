@@ -1,11 +1,18 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: Sunprem06/MHTSdigiX_Web_Demo_Premium
   branch: main
+  # OAuth provider: a small Cloudflare Worker (see ../cms-oauth-worker/README.md),
+  # replacing Netlify Identity + Git Gateway, which only runs on Netlify's own
+  # infrastructure — see MEMORY.md 2026-10-29. Update this if you bind the
+  # Worker to a different domain.
+  base_url: https://cms-auth.premium.mhtsdigixr.com
+  auth_endpoint: auth
 
 # Editorial workflow puts every change through a draft -> review -> publish
-# flow (shown as a Netlify "deploy preview") instead of writing straight to
-# main. Good default for a non-technical admin, since it gives a chance to
-# review before a save goes live on the already-deployed demo.
+# flow (opens a GitHub branch + PR instead of a Netlify deploy preview, now
+# that the backend is GitHub rather than git-gateway) instead of writing
+# straight to main. Good default for a non-technical admin.
 publish_mode: editorial_workflow
 
 # No media widgets are used by any field below (none of the admin-editable
@@ -14,8 +21,8 @@ publish_mode: editorial_workflow
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
 
-site_url: https://mhtsdigixr-hospital-premium-demo.netlify.app
-display_url: https://mhtsdigixr-hospital-premium-demo.netlify.app
+site_url: https://demo.premium.mhtsdigixr.com
+display_url: https://demo.premium.mhtsdigixr.com
 
 logo_url: ""
 

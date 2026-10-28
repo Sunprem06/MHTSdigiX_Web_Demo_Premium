@@ -20,30 +20,15 @@
     represents a real facility, staff, or patient. See CLAUDE.md / MEMORY.md
     in the repo for the full disclosure.
 
-    Real git-gateway login only works once this project is actually deployed
-    to Netlify with Identity + Git Gateway enabled in that site's dashboard —
-    see ARCHITECTURE.md "The CMS pattern". That has not been done for this
-    concept demo, so the login step below will not complete; this page still
-    loads and parses config.yml correctly, which is the bar this demo targets.
+    Login is via Decap's GitHub backend (config.yml), authorized through a
+    small Cloudflare Worker OAuth provider — see ../cms-oauth-worker/README.md
+    and MEMORY.md 2026-10-29. This replaced Netlify Identity + Git Gateway,
+    which only ran on Netlify's own infrastructure and couldn't follow this
+    site to Hostinger. Logging in requires GitHub collaborator access on
+    Sunprem06/MHTSdigiX_Web_Demo_Premium.
   -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-  <script>
-    // Standard Decap CMS + Netlify Identity bootstrap: if a user completes
-    // the Identity invite/login flow from a link that lands them anywhere
-    // other than /admin/, send them back here so the CMS can pick up the
-    // session Git Gateway needs.
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", function (user) {
-        if (!user) {
-          window.netlifyIdentity.on("login", function () {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
-  </script>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html>

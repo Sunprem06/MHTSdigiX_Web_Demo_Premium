@@ -49,8 +49,9 @@ depth and lighting. See `DESIGN.md` for the full rationale.
 - `src/content/site-content.ts` imports every JSON file and re-exports typed values under
   stable names — every page/component imports from `@/content/site-content`, never from a raw
   JSON file, so the CMS schema can evolve without touching component code.
-- `public/admin/index.html` + `public/admin/config.yml` define the Decap CMS UI: one
-  `git-gateway` backend, `editorial_workflow` publish mode, one collection per content file
+- `public/admin/index.html` + `public/admin/config.yml` define the Decap CMS UI: a `github`
+  backend (OAuth, via `cms-oauth-worker/` — see "Hosting & deployment" below), `editorial_workflow`
+  publish mode, one collection per content file
   (hero/banner slides, department summaries, doctor roster, services, health packages, blog
   posts, gallery captions, footer/contact placeholders, FAQ entries).
 - **What's different here vs. `Demo`:** `Demo` is a single long-scroll landing page, so its CMS
@@ -61,14 +62,14 @@ depth and lighting. See `DESIGN.md` for the full rationale.
   route structure, the 3D scene's internal parameters, brand identity/demo-disclosure text,
   and anything that would let a non-technical edit accidentally break type safety (department
   `slug`s, doctor `id`s used as list keys) — see `MEMORY.md`.
-- **Real git-gateway login only works after deployment.** `config.yml`'s `backend.name:
-  git-gateway` requires a live Netlify site with Identity + Git Gateway turned on in that
-  site's dashboard — a one-time, deployment-time setup step this project does not perform
-  (no GitHub repo has been created, let alone deployed — see `RULES.md`). What *is* verified
-  here is that `public/admin/index.html` loads, fetches `config.yml`, and renders Decap's
-  config-driven UI without a schema/validation error — i.e., the admin "builds and loads
-  cleanly," exactly the bar the task set. Login itself will correctly fail/hang until a real
-  deployment exists; this is expected and documented, not a bug.
+- **CMS login runs through a GitHub OAuth App + Cloudflare Worker, not Netlify.** The project
+  was originally built against `git-gateway` (Netlify Identity's proxy to GitHub), which only
+  works on Netlify's own infrastructure. Since moving to Hostinger (2026-10-29, see
+  `MEMORY.md`), `config.yml` uses Decap's `github` backend instead: `/admin` authorizes
+  directly against GitHub, via a small OAuth token-exchange service (`cms-oauth-worker/`, a
+  Cloudflare Worker — see its `README.md` for the one-time GitHub OAuth App + Worker deploy
+  steps). Logging in requires real GitHub collaborator access on
+  `Sunprem06/MHTSdigiX_Web_Demo_Premium` — there's no separate Identity user list anymore.
 
 ## Folder structure
 ```
@@ -146,15 +147,33 @@ there is no CMS fetch, no runtime data source. The only runtime state is:
   deployment; nothing to configure on an undeployed static demo.
 
 ## Trust boundaries
-There are none beyond the browser itself — no secrets, no API keys, no third-party network
-calls at runtime beyond self-hosted fonts (`next/font/google`, resolved at build time) and the
-two CDN scripts the Decap admin page loads (`netlify-identity-widget.js`, `decap-cms.js`,
-isolated to `/admin`, `noindex,nofollow`, and inert until a real deployment exists). This keeps
-the demo's security surface minimal, appropriate for an unauthenticated, undeployed concept
-site (see `RULES.md` Security section).
+No secrets or API keys live in this repo. At runtime the public site makes no third-party
+network calls beyond self-hosted fonts (`next/font/google`, resolved at build time). `/admin`
+(`noindex,nofollow`) loads one CDN script (`decap-cms.js`) and talks to the `cms-oauth-worker`
+Cloudflare Worker for login — the GitHub OAuth Client Secret lives only as a Worker secret
+(`wrangler secret put`), never in this repo or in client-side code. See "Hosting & deployment"
+below.
 
 ## Architecture diagram
 Not generated via Archify for this project (no Archify skill run in this session). The folder
 structure and data-flow description above cover the same ground. If Archify becomes available
 in a future session, regenerate per the `website-kickoff` skill's Step 4 and link the output
 here under `docs/architecture/`.
+
+## Hosting & deployment
+Live at `demo.premium.mhtsdigixr.com` on Hostinger Business Web Hosting, as a static export
+(see `MEMORY.md` 2026-10-29). `next.config.mjs` sets `output: "export"`.
+
+To redeploy after a content/code change:
+```bash
+npm run build        # writes the full static site to out/
+```
+Then upload the contents of `out/` (not the folder itself) to the subdomain's document root
+in Hostinger hPanel (File Manager, or FTP/SFTP), replacing what's there. There is no build
+step on the server — `out/` is the deployed artifact.
+
+`/admin` (Decap CMS) logs in via GitHub OAuth, not Netlify Identity/Git Gateway — see "The CMS
+pattern" above and `cms-oauth-worker/README.md` for the one-time GitHub OAuth App + Cloudflare
+Worker setup. A CMS publish commits straight to this repo (via `editorial_workflow`, so it
+opens a branch/PR rather than writing to `main` directly); pulling that into `main` and
+redeploying `out/` is the same two steps above.

@@ -62,3 +62,31 @@ Dated, append-only. Short entries; don't delete past ones.
   the Decap login screen with config.yml parsed successfully, no redirect loop, no config
   error. This looks like a latent bug in `Demo`'s merged pattern too (not something this
   project introduced) — worth a quick fix-forward there in a future session.
+- **2026-10-29** — Moved to Hostinger Business Web Hosting at `demo.premium.mhtsdigixr.com`,
+  as a static export (`output: "export"` in `next.config.mjs`). Confirmed via `npm run build`
+  all 31 routes are static/SSG with no API routes (same as the pre-move check). Two changes
+  were required beyond the config flag:
+  1. `src/app/sitemap.ts` / `robots.ts` needed `export const dynamic = "force-static"` —
+     `output: "export"` requires it explicitly for any metadata route that computes a value
+     (here, `new Date()` and the departments/blog lists), same fix as `Starter`/`Standard`.
+  2. Dropped the `rewrites()` block from `next.config.mjs` entirely: `output: "export"`
+     doesn't support `next.config` rewrites/redirects at all (`next build` warns and the
+     rewrite silently does nothing), and it turned out not to be needed anyway —
+     `public/admin/index.html` is a plain static file, and Apache-style static hosting
+     (Hostinger) serves `index.html` for a directory request (`/admin/`) the same way it does
+     for any other folder, no rewrite required.
+- **2026-10-29** — Swapped the Decap CMS backend from `git-gateway` to `github` (OAuth),
+  because Git Gateway is a Netlify-proprietary feature (Netlify Identity's proxy to GitHub)
+  that cannot run on any non-Netlify host — there is no config that makes it work on
+  Hostinger. Decap's GitHub backend logs `/admin` in directly against GitHub instead, but
+  needs a server-side OAuth token exchange (a static site can't hold a client secret), so
+  added a small Cloudflare Worker (`cms-oauth-worker/`, see its `README.md` for the GitHub
+  OAuth App + Worker deploy steps) as that exchange service — chosen over a Hostinger Node
+  app because `mhtsdigixr.com`'s DNS already lives on Cloudflare, making a custom-domain
+  Worker binding trivial and free, and because it decouples CMS auth from whatever Hostinger
+  plan/Node support turns out to be. Updated `public/admin/config.yml` (`repo:`, `base_url:`,
+  `auth_endpoint:`) and stripped the now-unused `netlify-identity-widget.js` script and its
+  bootstrap code from `public/admin/index.html`. Net effect: `/admin` login now works from
+  any host, but requires (a) a GitHub OAuth App + deployed Worker, one-time setup, and (b)
+  real GitHub collaborator access on `Sunprem06/MHTSdigiX_Web_Demo_Premium` for anyone who
+  needs to log in — there's no separate Identity user list anymore.
