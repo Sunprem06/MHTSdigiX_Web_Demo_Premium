@@ -1,0 +1,12 @@
+{
+  "eyebrow": "Careers",
+  "heading": "Illustrative sample openings.",
+  "intro": "Beacon Ridge is a fictional hospital with no real hiring process. The listings below are illustrative sample openings only — not active job postings.",
+  "openings": [
+    { "title": "Staff Nurse — Pediatrics", "type": "Illustrative sample listing", "description": "Illustrative example of a pediatric nursing role on a multi-specialty campus." },
+    { "title": "Lab Technician — Diagnostics", "type": "Illustrative sample listing", "description": "Illustrative example of a diagnostics-lab technician role." },
+    { "title": "Patient Care Coordinator", "type": "Illustrative sample listing", "description": "Illustrative example of a front-desk/coordination role spanning multiple departments." },
+    { "title": "Physiotherapist", "type": "Illustrative sample listing", "description": "Illustrative example of an in-house physiotherapy role supporting orthopedics and neurology discharge plans." }
+  ],
+  "disclaimer": "These are illustrative sample listings for a fictional hospital, not active job postings. Do not submit a real application in response to this page."
+}

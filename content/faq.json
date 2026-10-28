@@ -1,0 +1,37 @@
+{
+  "eyebrow": "Patient Resources",
+  "heading": "What to know before you visit.",
+  "intro": "General, illustrative information for this concept demo — for anything specific to your own care, always confirm with your care team directly.",
+  "groups": [
+    {
+      "category": "Visiting",
+      "items": [
+        { "question": "What are visiting hours?", "answer": "Illustrative general visiting hours are 10:00 AM – 1:00 PM and 5:00 PM – 8:00 PM daily, with exceptions for critical care areas. A real hospital's actual hours would appear here instead." },
+        { "question": "What should I bring to my first visit?", "answer": "A list of current medications, any prior reports or imaging, a valid ID, and your insurance details if applicable (illustrative guidance)." },
+        { "question": "Can I bring a family member into the consultation?", "answer": "Generally yes, space permitting — illustrative guidance; a real hospital would confirm its own policy here." }
+      ]
+    },
+    {
+      "category": "Appointments",
+      "items": [
+        { "question": "How far in advance should I book?", "answer": "For planned specialist consultations, a few days' notice is typical (illustrative). Emergency care never requires booking — see the note below." },
+        { "question": "Can I request a specific doctor?", "answer": "Yes — the appointment form includes an optional \"preferred doctor\" field, though availability would vary in a real deployment." },
+        { "question": "What if I need to reschedule?", "answer": "On a real site this would link to a reschedule flow or a phone number. This concept demo's forms don't send data anywhere — see the Contact page for details." }
+      ]
+    },
+    {
+      "category": "Discharge & Follow-up",
+      "items": [
+        { "question": "What does the discharge process generally involve?", "answer": "Typically a discharge summary, medication instructions, and a follow-up appointment if needed (illustrative general description, not specific medical guidance)." },
+        { "question": "Are telehealth follow-ups available?", "answer": "This concept demo illustrates a telehealth follow-up offering under Services — a real deployment would detail the actual platform and process." }
+      ]
+    },
+    {
+      "category": "Emergencies",
+      "items": [
+        { "question": "When should I go to the Emergency department instead of booking an appointment?", "answer": "For anything that could be life-threatening or rapidly worsening — chest pain, difficulty breathing, severe bleeding, sudden confusion. If you are in a real emergency, call your local emergency number immediately; do not use this website, or any website, to decide." }
+      ]
+    }
+  ],
+  "disclaimer": "This page contains general, illustrative information for a fictional concept hospital, not medical advice or emergency guidance. Always confirm specifics with your own care team, and call your local emergency number for any real emergency."
+}

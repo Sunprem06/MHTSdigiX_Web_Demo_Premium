@@ -1,0 +1,19 @@
+{
+  "eyebrow": "About Beacon Ridge",
+  "heading": "A multi-specialty campus, built around coordination.",
+  "intro": "Beacon Ridge Multispecialty Hospital is a fictional concept hospital brand created by MHTSdigiXR to demonstrate what a Premium-tier healthcare website looks like. Everything on this page — the hospital, its story, its facilities — is illustrative, not a real institution.",
+  "mission": "To make multi-specialty care feel like one coordinated plan instead of a string of separate appointments.",
+  "values": [
+    { "title": "Clarity", "description": "Every consultation ends with a plan you actually understand, in plain language." },
+    { "title": "Coordination", "description": "Departments share notes on shared cases, instead of treating you as a series of disconnected visits." },
+    { "title": "Calm", "description": "Facilities, pacing and communication designed to lower stress, not add to it." },
+    { "title": "Candor", "description": "If something is outside our expertise, we say so and refer you onward — illustrative of how the brand wants to be perceived." }
+  ],
+  "milestones": [
+    { "year": "Illustrative", "label": "Multi-specialty campus concept", "description": "A single-campus layout bringing 6+ core departments under one roof — a concept-demo illustration, not a real construction timeline." },
+    { "year": "Illustrative", "label": "Preventive health focus added", "description": "Executive and cardiac checkup packages designed as an illustrative example of a hospital's wellness offering." },
+    { "year": "Illustrative", "label": "Digital-first patient experience", "description": "This website itself — appointment requests, a doctor directory, and department guides — as a concept demonstration of what a modern hospital site can offer." }
+  ],
+  "accreditationNote": "A real hospital site would list its real accreditations (e.g. a national quality board, insurance-network memberships) here, each linking to a verifiable source. Beacon Ridge is fictional, so this section intentionally shows the layout only, with no invented certification bodies or numbers.",
+  "disclaimer": "This page describes a fictional concept brand for demonstration purposes. It is not a real hospital, and nothing on it should be treated as a factual claim about any real institution."
+}

@@ -1,0 +1,436 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Editorial workflow puts every change through a draft -> review -> publish
+# flow (shown as a Netlify "deploy preview") instead of writing straight to
+# main. Good default for a non-technical admin, since it gives a chance to
+# review before a save goes live on the already-deployed demo.
+publish_mode: editorial_workflow
+
+# No media widgets are used by any field below (none of the admin-editable
+# content is an image — every image on this site is a code-controlled inline
+# SVG illustration, see DESIGN.md), but Decap requires these to be set.
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+site_url: https://mhtsdigixr-hospital-premium-demo.netlify.app
+display_url: https://mhtsdigixr-hospital-premium-demo.netlify.app
+
+logo_url: ""
+
+collections:
+  - name: "hero"
+    label: "Home Banner (Hero Slides)"
+    description: "The rotating banner slides shown at the top of the Home page."
+    files:
+      - file: "content/hero.json"
+        name: "hero"
+        label: "Hero Slides"
+        fields:
+          - label: "Slides"
+            name: "slides"
+            widget: "list"
+            summary: "{{eyebrow}}"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Headline", name: "headline", widget: "text", hint: "Press Enter for a line break." }
+              - { label: "Subheading", name: "subhead", widget: "text" }
+              - { label: "Primary Button Label", name: "primaryCtaLabel", widget: "string" }
+              - { label: "Secondary Button Label", name: "secondaryCtaLabel", widget: "string" }
+
+  - name: "signature_experience"
+    label: "Signature 3D Section"
+    description: "Copy shown above and over the live 3D scene on the Home page. Does not affect the 3D scene itself."
+    files:
+      - file: "content/signature-experience.json"
+        name: "signature-experience"
+        label: "Signature Experience"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Body", name: "body", widget: "text" }
+          - { label: "No-3D Fallback Note", name: "fallbackNote", widget: "text" }
+          - label: "Beats"
+            name: "beats"
+            widget: "list"
+            summary: "{{label}}"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+
+  - name: "about"
+    label: "About Page"
+    files:
+      - file: "content/about.json"
+        name: "about"
+        label: "About"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Intro", name: "intro", widget: "text" }
+          - { label: "Mission", name: "mission", widget: "text" }
+          - label: "Values"
+            name: "values"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - label: "Milestones"
+            name: "milestones"
+            widget: "list"
+            summary: "{{label}}"
+            fields:
+              - { label: "Year", name: "year", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - { label: "Accreditation Note", name: "accreditationNote", widget: "text" }
+          - { label: "Disclaimer", name: "disclaimer", widget: "text" }
+
+  - name: "departments"
+    label: "Departments"
+    description: "The departments hub intro, each department's detail content, and the 'More Specialties' grid. Keep Internal ID / Slug unchanged — they're used as stable keys and routes."
+    files:
+      - file: "content/departments.json"
+        name: "departments"
+        label: "Departments"
+        fields:
+          - { label: "Hub Eyebrow", name: "hubEyebrow", widget: "string" }
+          - { label: "Hub Heading", name: "hubHeading", widget: "string" }
+          - { label: "Hub Intro", name: "hubIntro", widget: "text" }
+          - label: "Departments"
+            name: "departments"
+            widget: "list"
+            summary: "{{name}}"
+            fields:
+              - { label: "Internal ID (do not change)", name: "id", widget: "string" }
+              - { label: "URL Slug (do not change)", name: "slug", widget: "string" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Icon (advanced — must match a code-defined icon name)", name: "icon", widget: "string" }
+              - { label: "Summary (hub card)", name: "summary", widget: "text" }
+              - { label: "Overview", name: "overview", widget: "text" }
+              - label: "Commonly Managed"
+                name: "commonlyManaged"
+                widget: "list"
+                field: { label: "Item", name: "item", widget: "string" }
+              - { label: "Our Approach", name: "approach", widget: "text" }
+              - label: "Related Doctor IDs (advanced)"
+                name: "relatedDoctorIds"
+                widget: "list"
+                field: { label: "Doctor ID", name: "id", widget: "string" }
+              - label: "Related Blog Slugs (advanced)"
+                name: "relatedBlogSlugs"
+                widget: "list"
+                field: { label: "Slug", name: "slug", widget: "string" }
+          - label: "More Specialties"
+            name: "moreSpecialties"
+            widget: "list"
+            summary: "{{name}}"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Icon (advanced)", name: "icon", widget: "string" }
+          - { label: "Disclaimer", name: "disclaimer", widget: "text" }
+
+  - name: "doctors"
+    label: "Doctors"
+    description: "All doctor profiles are fictional and illustrative — see RULES.md. Never add a real clinician's name, photo, or credential."
+    files:
+      - file: "content/doctors.json"
+        name: "doctors"
+        label: "Doctors"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Intro", name: "intro", widget: "text" }
+          - label: "Doctors"
+            name: "doctors"
+            widget: "list"
+            summary: "{{name}}"
+            fields:
+              - { label: "Internal ID (do not change)", name: "id", widget: "string" }
+              - { label: "Name (fictional)", name: "name", widget: "string" }
+              - { label: "Initials (for the illustrated avatar)", name: "initials", widget: "string" }
+              - { label: "Department", name: "department", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Experience (illustrative)", name: "experienceYears", widget: "string" }
+              - { label: "Bio", name: "bio", widget: "text" }
+              - label: "Focus Areas"
+                name: "focusAreas"
+                widget: "list"
+                field: { label: "Area", name: "area", widget: "string" }
+          - { label: "Disclaimer", name: "disclaimer", widget: "text" }
+
+  - name: "services"
+    label: "Hospital Services"
+    files:
+      - file: "content/services.json"
+        name: "services"
+        label: "Services"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Intro", name: "intro", widget: "text" }
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Icon (advanced)", name: "icon", widget: "string" }
+          - { label: "Disclaimer", name: "disclaimer", widget: "text" }
+
+  - name: "health_packages"
+    label: "Health Packages"
+    description: "Pricing must stay labeled as illustrative — see RULES.md."
+    files:
+      - file: "content/health-packages.json"
+        name: "health-packages"
+        label: "Health Packages"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Intro", name: "intro", widget: "text" }
+          - label: "Packages"
+            name: "packages"
+            widget: "list"
+            summary: "{{name}}"
+            fields:
+              - { label: "Internal ID (do not change)", name: "id", widget: "string" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Price (keep \"illustrative placeholder\" wording)", name: "priceFrom", widget: "string" }
+              - { label: "Recommended For", name: "recommendedFor", widget: "string" }
+              - label: "Includes"
+                name: "includes"
+                widget: "list"
+                field: { label: "Item", name: "item", widget: "string" }
+          - { label: "Disclaimer", name: "disclaimer", widget: "text" }
+
+  - name: "blog"
+    label: "Blog Posts"
+    description: "Every post must stay general wellness information, not medical advice — see RULES.md."
+    files:
+      - file: "content/blog.json"
+        name: "blog"
+        label: "Blog"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Intro", name: "intro", widget: "text" }
+          - label: "Posts"
+            name: "posts"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "URL Slug (do not change)", name: "slug", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "Excerpt", name: "excerpt", widget: "text" }
+              - { label: "Published Date", name: "publishedDate", widget: "string" }
+              - { label: "Reviewed Date (illustrative)", name: "reviewedDate", widget: "string" }
+              - { label: "Read Time", name: "readTime", widget: "string" }
+              - { label: "Related Department Slug (advanced, optional)", name: "relatedDepartmentSlug", widget: "string", required: false }
+              - label: "Body Paragraphs"
+                name: "body"
+                widget: "list"
+                field: { label: "Paragraph", name: "paragraph", widget: "text" }
+          - { label: "Disclaimer", name: "disclaimer", widget: "text" }
+
+  - name: "gallery"
+    label: "Gallery"
+    files:
+      - file: "content/gallery.json"
+        name: "gallery"
+        label: "Gallery"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Intro", name: "intro", widget: "text" }
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Internal ID (advanced — must match a code-defined illustration)", name: "id", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "Caption", name: "caption", widget: "text" }
+          - { label: "Disclaimer", name: "disclaimer", widget: "text" }
+
+  - name: "faq"
+    label: "Patient Resources (FAQ)"
+    files:
+      - file: "content/faq.json"
+        name: "faq"
+        label: "FAQ"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Intro", name: "intro", widget: "text" }
+          - label: "Groups"
+            name: "groups"
+            widget: "list"
+            summary: "{{category}}"
+            fields:
+              - { label: "Category", name: "category", widget: "string" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                summary: "{{question}}"
+                fields:
+                  - { label: "Question", name: "question", widget: "string" }
+                  - { label: "Answer", name: "answer", widget: "text" }
+          - { label: "Disclaimer", name: "disclaimer", widget: "text" }
+
+  - name: "footer"
+    label: "Footer"
+    description: "Footer about text and placeholder contact details. These are demo placeholders, not real contact info — see MEMORY.md before entering anything real."
+    files:
+      - file: "content/footer.json"
+        name: "footer"
+        label: "Footer"
+        fields:
+          - { label: "About Text", name: "about", widget: "text" }
+          - label: "Placeholder Contact Details"
+            name: "contactPlaceholder"
+            widget: "object"
+            fields:
+              - { label: "Phone (placeholder)", name: "phone", widget: "string" }
+              - { label: "Email (placeholder)", name: "email", widget: "string" }
+              - { label: "Address (placeholder)", name: "address", widget: "string" }
+              - { label: "Emergency Note", name: "emergencyNote", widget: "string" }
+          - label: "Social Links (placeholder)"
+            name: "social"
+            widget: "list"
+            summary: "{{label}}"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "URL (advanced — placeholder #)", name: "href", widget: "string" }
+
+  - name: "appointment"
+    label: "Appointment Form Copy"
+    description: "Copy and dropdown options for the demo appointment-request form. The form does not send submissions anywhere (see Body text)."
+    files:
+      - file: "content/appointment.json"
+        name: "appointment"
+        label: "Appointment"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Body", name: "body", widget: "text" }
+          - label: "Department Options"
+            name: "departmentOptions"
+            widget: "list"
+            field: { label: "Department", name: "department", widget: "string" }
+          - label: "Visit Type Options"
+            name: "visitTypeOptions"
+            widget: "list"
+            field: { label: "Type", name: "type", widget: "string" }
+          - label: "Preferred Time Options"
+            name: "preferredTimeOptions"
+            widget: "list"
+            field: { label: "Time", name: "time", widget: "string" }
+          - { label: "Success Message", name: "successMessage", widget: "text" }
+
+  - name: "contact"
+    label: "Contact Form Copy"
+    description: "Copy and dropdown options for the demo contact form. The form does not send submissions anywhere (see Body text)."
+    files:
+      - file: "content/contact.json"
+        name: "contact"
+        label: "Contact"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Body", name: "body", widget: "text" }
+          - label: "Subject Options"
+            name: "subjectOptions"
+            widget: "list"
+            field: { label: "Subject", name: "subject", widget: "string" }
+          - { label: "Success Message", name: "successMessage", widget: "text" }
+          - { label: "Map Note", name: "mapNote", widget: "text" }
+          - { label: "WhatsApp Prefilled Message", name: "whatsappMessage", widget: "string" }
+
+  - name: "insurance"
+    label: "Insurance & Billing"
+    description: "Insurer names here must stay fictional/illustrative — never a real insurance company. See RULES.md."
+    files:
+      - file: "content/insurance.json"
+        name: "insurance"
+        label: "Insurance & Billing"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Intro", name: "intro", widget: "text" }
+          - label: "Insurers (fictional)"
+            name: "insurers"
+            widget: "list"
+            summary: "{{name}}"
+            fields:
+              - { label: "Name (must say \"illustrative\")", name: "name", widget: "string" }
+              - { label: "Note", name: "note", widget: "string" }
+          - label: "Billing FAQ"
+            name: "billingFaq"
+            widget: "list"
+            summary: "{{question}}"
+            fields:
+              - { label: "Question", name: "question", widget: "string" }
+              - { label: "Answer", name: "answer", widget: "text" }
+          - { label: "Disclaimer", name: "disclaimer", widget: "text" }
+
+  - name: "careers"
+    label: "Careers"
+    description: "These are illustrative sample listings, not active job postings — see RULES.md."
+    files:
+      - file: "content/careers.json"
+        name: "careers"
+        label: "Careers"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Intro", name: "intro", widget: "text" }
+          - label: "Openings (illustrative)"
+            name: "openings"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Type (keep \"Illustrative sample listing\")", name: "type", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - { label: "Disclaimer", name: "disclaimer", widget: "text" }
+
+  - name: "legal"
+    label: "Privacy & Terms"
+    files:
+      - file: "content/legal.json"
+        name: "legal"
+        label: "Privacy & Terms"
+        fields:
+          - label: "Privacy Policy"
+            name: "privacy"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+              - label: "Sections"
+                name: "sections"
+                widget: "list"
+                summary: "{{title}}"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Body", name: "body", widget: "text" }
+          - label: "Terms of Use"
+            name: "terms"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+              - label: "Sections"
+                name: "sections"
+                widget: "list"
+                summary: "{{title}}"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Body", name: "body", widget: "text" }

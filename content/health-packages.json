@@ -1,0 +1,36 @@
+{
+  "eyebrow": "Health Packages",
+  "heading": "Preventive checkups, not just sick-visits.",
+  "intro": "Illustrative preventive packages — pricing below is a placeholder \"starting from\" figure for this concept demo, not a real quotable rate.",
+  "packages": [
+    {
+      "id": "essential-wellness",
+      "name": "Essential Wellness Checkup",
+      "priceFrom": "Starting from ₹2,499 (illustrative placeholder)",
+      "recommendedFor": "Anyone due for a general annual health review.",
+      "includes": ["Blood pressure & basic vitals", "Blood sugar & lipid profile", "General physician consultation", "Illustrative report walkthrough"]
+    },
+    {
+      "id": "executive-health",
+      "name": "Executive Health Package",
+      "priceFrom": "Starting from ₹6,999 (illustrative placeholder)",
+      "recommendedFor": "Working professionals wanting a broader annual screen.",
+      "includes": ["Full body vitals & blood work", "ECG & cardiac risk screening", "Vision & hearing screen", "Consultant review + written plan"]
+    },
+    {
+      "id": "womens-wellness",
+      "name": "Women's Wellness Package",
+      "priceFrom": "Starting from ₹4,499 (illustrative placeholder)",
+      "recommendedFor": "Routine women's health screening, independent of pregnancy care.",
+      "includes": ["General health panel", "Women's health consultation", "Bone density screening (illustrative)", "Nutrition guidance session"]
+    },
+    {
+      "id": "cardiac-screening",
+      "name": "Cardiac Screening Package",
+      "priceFrom": "Starting from ₹5,499 (illustrative placeholder)",
+      "recommendedFor": "Anyone with a family history of heart conditions or focused cardiac concern.",
+      "includes": ["ECG & echocardiogram (illustrative)", "Lipid & cardiac risk panel", "Cardiology consultation", "Personalized risk-reduction plan"]
+    }
+  ],
+  "disclaimer": "All package pricing is an illustrative placeholder for this concept demo, not a real, bookable rate. Packages do not constitute medical advice or a diagnosis."
+}

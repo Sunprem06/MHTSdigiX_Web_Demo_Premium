@@ -1,0 +1,25 @@
+{
+  "slides": [
+    {
+      "eyebrow": "Multispecialty care, Coimbatore",
+      "headline": "Care, composed\naround you.",
+      "subhead": "Beacon Ridge brings cardiology, orthopedics, neurology, maternity, pediatrics and emergency care together on one campus — so your care plan doesn't have to be pieced together across town.",
+      "primaryCtaLabel": "Book an Appointment",
+      "secondaryCtaLabel": "Explore Departments"
+    },
+    {
+      "eyebrow": "Second opinions, welcomed",
+      "headline": "Already have a\ndiagnosis? Let's\ntalk it through.",
+      "subhead": "Our consultants review reports, imaging and treatment plans and give you a clear, unhurried second opinion before you decide anything.",
+      "primaryCtaLabel": "Request a Second Opinion",
+      "secondaryCtaLabel": "Meet Our Doctors"
+    },
+    {
+      "eyebrow": "Preventive health",
+      "headline": "Catch it early.\nThat's the whole\npoint.",
+      "subhead": "Executive, cardiac and women's wellness checkup packages designed to surface what matters before it becomes urgent.",
+      "primaryCtaLabel": "View Health Packages",
+      "secondaryCtaLabel": "Book an Appointment"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "about": "Beacon Ridge Multispecialty Hospital is a MHTSdigiXR concept-demo brand built to showcase Premium-tier website capability. It is fictional — no real hospital, staff, or patient is represented.",
+  "contactPlaceholder": {
+    "phone": "+91 00000 00000 (placeholder)",
+    "email": "care@beaconridgehospital.example (placeholder)",
+    "address": "Placeholder Address, Peelamedu, Coimbatore, Tamil Nadu (fictional, concept demo)",
+    "emergencyNote": "In a real emergency, call your local emergency number — never this placeholder number."
+  },
+  "social": [
+    { "label": "Facebook", "href": "#" },
+    { "label": "Instagram", "href": "#" },
+    { "label": "LinkedIn", "href": "#" },
+    { "label": "YouTube", "href": "#" }
+  ]
+}

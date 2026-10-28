@@ -1,0 +1,15 @@
+{
+  "eyebrow": "Contact Us",
+  "heading": "Questions, second opinions, feedback.",
+  "body": "This is a demo form — nothing you enter is sent anywhere or stored beyond this page view.",
+  "subjectOptions": [
+    "General inquiry",
+    "Request a second opinion",
+    "Billing question",
+    "Feedback about a visit",
+    "Media / partnership inquiry"
+  ],
+  "successMessage": "Message received (demo only — nothing was actually sent). On a real deployment, our care-coordination team would respond within one business day.",
+  "mapNote": "This is a stylized placeholder map, not a live Google Maps embed — Beacon Ridge has no real address to map.",
+  "whatsappMessage": "Hi Beacon Ridge, I'd like to ask about booking an appointment."
+}

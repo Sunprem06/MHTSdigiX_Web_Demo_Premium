@@ -1,0 +1,16 @@
+{
+  "eyebrow": "Campus Gallery",
+  "heading": "A look around (all illustrated).",
+  "intro": "Every image below is an inline illustration, not a photograph — Beacon Ridge is a fictional hospital, so there are no real spaces to photograph.",
+  "items": [
+    { "id": "lobby", "title": "Main Lobby & Reception", "category": "Common Areas", "caption": "An open, daylit reception designed to feel more like an arrival hall than a waiting room." },
+    { "id": "patient-room", "title": "Patient Room", "category": "Inpatient Care", "caption": "A private patient room with a dedicated family seating nook." },
+    { "id": "operation-theatre", "title": "Operation Theatre Wing", "category": "Surgical Care", "caption": "The OT wing's exterior corridor — clean lines, clear signage, no clinical detail depicted." },
+    { "id": "pediatric-play", "title": "Pediatric Play Corner", "category": "Pediatrics", "caption": "A play corner inside the pediatric wing, designed to feel less like a waiting room." },
+    { "id": "diagnostic-lab", "title": "Diagnostic Lab", "category": "Diagnostics", "caption": "The on-campus diagnostics lab, illustrated at a distance — no equipment detail implied." },
+    { "id": "healing-garden", "title": "Healing Garden", "category": "Common Areas", "caption": "A small courtyard garden for patients and families to step outside." },
+    { "id": "cafeteria", "title": "Cafeteria", "category": "Common Areas", "caption": "An open cafeteria space for patients, families and staff." },
+    { "id": "ambulance-bay", "title": "Ambulance Bay", "category": "Emergency Care", "caption": "A dedicated, clearly marked ambulance arrival bay." }
+  ],
+  "disclaimer": "All gallery imagery is an inline SVG/CSS illustration created for this concept demo. No real photographs of any hospital, facility, equipment or person are used."
+}

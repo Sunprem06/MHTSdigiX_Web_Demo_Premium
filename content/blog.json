@@ -1,0 +1,94 @@
+{
+  "eyebrow": "Wellness Blog",
+  "heading": "General wellness reading, not medical advice.",
+  "intro": "Every post below is general, illustrative wellness information written for this concept demo. None of it is medical advice — always talk to a qualified clinician about your own situation.",
+  "posts": [
+    {
+      "slug": "5-habits-healthy-heart",
+      "title": "5 Everyday Habits That Support a Healthy Heart",
+      "category": "Heart Health",
+      "excerpt": "Small, repeatable habits tend to matter more for heart health than any single dramatic change.",
+      "publishedDate": "2026-09-02",
+      "reviewedDate": "2026-09-02 (illustrative)",
+      "readTime": "4 min read",
+      "relatedDepartmentSlug": "cardiology",
+      "body": [
+        "Heart health is usually less about one big intervention and more about a handful of small habits, repeated often enough that they stop feeling like effort.",
+        "A short daily walk, even 20 minutes, is consistently associated with better cardiovascular markers over time than occasional intense exercise alone.",
+        "Reducing added salt and processed food — not eliminating flavor, just rebalancing it — supports healthier blood pressure for most people.",
+        "Sleep quality affects heart rhythm and blood pressure more than most people expect; a consistent sleep schedule is a genuinely underrated habit.",
+        "Routine screening catches patterns — like rising blood pressure — long before they become symptomatic. That's the entire point of a preventive checkup.",
+        "This article is general wellness information for illustrative purposes only, not medical advice. Speak with a qualified clinician about your own heart health."
+      ]
+    },
+    {
+      "slug": "preparing-first-prenatal-visit",
+      "title": "Preparing for Your First Prenatal Visit: What to Expect",
+      "category": "Maternity",
+      "excerpt": "A first prenatal visit covers more ground than most people expect — here's a general idea of what it involves.",
+      "publishedDate": "2026-08-14",
+      "reviewedDate": "2026-08-14 (illustrative)",
+      "readTime": "5 min read",
+      "relatedDepartmentSlug": "maternity",
+      "body": [
+        "A first prenatal visit is usually longer than later ones — it's where your care team builds the baseline they'll track everything else against.",
+        "Expect questions about medical history, past pregnancies if any, and current medications — bring a list if you take any regularly.",
+        "Basic vitals, blood work, and often an early ultrasound are typical at this stage, though exactly what's done varies by how far along the pregnancy is.",
+        "This is also the right time to raise any delivery preferences you're already forming — even informally — so your team can start planning around them.",
+        "Bring a notebook or your phone's notes app; it's easy to forget questions once you're in the room.",
+        "This article is general wellness information for illustrative purposes only, not medical advice. Every pregnancy is different — talk to your own care team."
+      ]
+    },
+    {
+      "slug": "understanding-preventive-checkups",
+      "title": "Understanding Preventive Health Checkups: A Simple Guide",
+      "category": "Preventive Health",
+      "excerpt": "Preventive checkups aren't just for when something feels wrong — here's why, and how to pick one.",
+      "publishedDate": "2026-07-22",
+      "reviewedDate": "2026-07-22 (illustrative)",
+      "readTime": "4 min read",
+      "relatedDepartmentSlug": null,
+      "body": [
+        "A preventive checkup is built to catch patterns before symptoms show up — which is exactly why it's easy to put off.",
+        "Most packages combine basic vitals, blood work, and a consultation to walk through what the results actually mean.",
+        "The right package usually depends on age, family history, and whether you have a specific concern (like heart health or women's wellness) you want weighted more heavily.",
+        "A checkup is most useful when you actually act on what it finds — the appointment afterward to discuss results matters as much as the tests themselves.",
+        "This article is general wellness information for illustrative purposes only, not medical advice. A clinician can help you choose what's actually right for you."
+      ]
+    },
+    {
+      "slug": "helping-kids-feel-calm-hospital-visit",
+      "title": "Helping Kids Feel Calm Before a Hospital Visit",
+      "category": "Pediatrics",
+      "excerpt": "A little preparation goes a long way toward making a hospital visit less intimidating for a child.",
+      "publishedDate": "2026-06-30",
+      "reviewedDate": "2026-06-30 (illustrative)",
+      "readTime": "3 min read",
+      "relatedDepartmentSlug": "pediatrics",
+      "body": [
+        "Kids tend to pick up on a parent's own anxiety about a hospital visit faster than they react to the visit itself.",
+        "Simple, honest explanations — \"the doctor is going to look in your ears\" rather than vague reassurance — usually reduce fear more than surprises do.",
+        "Letting a child bring a familiar comfort object (a toy, a blanket) is a small thing that genuinely helps most children settle faster.",
+        "A pediatric-specific waiting space, separate from general waiting areas, measurably reduces how anxious children feel before being seen.",
+        "This article is general wellness information for illustrative purposes only, not medical advice."
+      ]
+    },
+    {
+      "slug": "emergency-vs-urgent-care",
+      "title": "Recognizing When to Seek Emergency Care vs. Urgent Care",
+      "category": "Emergency Care",
+      "excerpt": "Knowing the difference between \"urgent\" and \"emergency\" can save real time when it matters.",
+      "publishedDate": "2026-06-05",
+      "reviewedDate": "2026-06-05 (illustrative)",
+      "readTime": "4 min read",
+      "relatedDepartmentSlug": "emergency",
+      "body": [
+        "Urgent care generally covers things that need attention soon but aren't immediately life-threatening — a sprain, a persistent fever, a minor cut needing stitches.",
+        "Emergency care is for anything that could be life-threatening or rapidly worsening: chest pain, difficulty breathing, severe bleeding, sudden confusion, or a severe allergic reaction.",
+        "If you are genuinely unsure which category you're in, treat it as an emergency — the cost of being wrong in the other direction is much higher.",
+        "This general guidance is for illustrative purposes only and is not medical advice or emergency guidance. If you are experiencing a real emergency, call your local emergency number immediately — do not use this website, or any website, to decide."
+      ]
+    }
+  ],
+  "disclaimer": "This blog contains general, illustrative wellness information for a fictional concept hospital. None of it is medical advice, a diagnosis, or emergency guidance. Always consult a qualified clinician, and call your local emergency number for any real emergency."
+}

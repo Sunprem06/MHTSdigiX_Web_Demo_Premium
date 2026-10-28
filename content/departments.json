@@ -1,0 +1,88 @@
+{
+  "hubEyebrow": "Departments",
+  "hubHeading": "Six core departments. One coordinated campus.",
+  "hubIntro": "Each department below links to a detail page with its illustrative approach to care. A few more specialties are available by request — see \"More Specialties\" further down, or reach out directly.",
+  "departments": [
+    {
+      "id": "cardiology",
+      "slug": "cardiology",
+      "name": "Cardiology & Heart Care",
+      "icon": "heart",
+      "summary": "Preventive screening through to post-procedure follow-up, coordinated with our emergency and internal medicine teams.",
+      "overview": "Our cardiology team focuses on catching patterns early — blood pressure, cholesterol and rhythm irregularities — well before they become emergencies, alongside structured care for patients already managing a heart condition.",
+      "commonlyManaged": ["Routine cardiac screening and risk assessment", "Hypertension management", "Post-procedure cardiac follow-up", "Heart-rhythm monitoring"],
+      "approach": "Every new cardiology patient gets a written care plan in plain language, reviewed with you before you leave — not mailed to you later.",
+      "relatedDoctorIds": ["dr-ananya-rao", "dr-rohan-mehta"],
+      "relatedBlogSlugs": ["5-habits-healthy-heart"]
+    },
+    {
+      "id": "orthopedics",
+      "slug": "orthopedics",
+      "name": "Orthopedics & Joint Care",
+      "icon": "bone",
+      "summary": "Joint, spine and sports-injury care, from first consult through physiotherapy-supported recovery.",
+      "overview": "From a nagging knee to planning a joint replacement, our orthopedics team pairs surgical consultation with an in-house physiotherapy track, so recovery planning starts on day one, not after discharge.",
+      "commonlyManaged": ["Knee and hip joint assessment", "Sports-injury evaluation", "Fracture care and follow-up", "Post-surgical physiotherapy coordination"],
+      "approach": "We default to the least invasive option that's medically appropriate, and explain the trade-offs of each path before recommending surgery.",
+      "relatedDoctorIds": ["dr-marcus-chen"],
+      "relatedBlogSlugs": []
+    },
+    {
+      "id": "neurology",
+      "slug": "neurology",
+      "name": "Neurology & Spine Care",
+      "icon": "brain",
+      "summary": "Headache, nerve and spine-related care, with imaging and physiotherapy coordinated on-campus.",
+      "overview": "Persistent headaches, nerve pain, or a spine concern that hasn't resolved with rest — our neurology team works through a structured assessment before recommending imaging, so you're not sent for scans you don't need.",
+      "commonlyManaged": ["Recurring headache and migraine evaluation", "Nerve-pain assessment", "Spine and disc-related concerns", "Post-stroke follow-up coordination"],
+      "approach": "Every imaging recommendation comes with a plain-language explanation of what we're ruling in or out, before you consent to the scan.",
+      "relatedDoctorIds": ["dr-priya-nair"],
+      "relatedBlogSlugs": []
+    },
+    {
+      "id": "pediatrics",
+      "slug": "pediatrics",
+      "name": "Pediatrics & Child Health",
+      "icon": "child",
+      "summary": "Routine checkups, vaccinations and child-focused urgent care in a space designed to feel less intimidating.",
+      "overview": "A separate pediatric wing, a play corner instead of a waiting room, and consultations that talk to the child first and the parent second — our pediatrics team is built around making a hospital visit less stressful for kids.",
+      "commonlyManaged": ["Routine growth and development checkups", "Vaccination scheduling", "Common childhood illness care", "Pre-school and sports health clearance"],
+      "approach": "We explain every step to the child in age-appropriate language before doing it — not just to the parent.",
+      "relatedDoctorIds": ["dr-daniel-osei"],
+      "relatedBlogSlugs": ["helping-kids-feel-calm-hospital-visit"]
+    },
+    {
+      "id": "maternity",
+      "slug": "maternity",
+      "name": "Maternity & Women's Health",
+      "icon": "maternity",
+      "summary": "Prenatal care through delivery and postnatal follow-up, alongside general women's health consultations.",
+      "overview": "From a first prenatal visit to postnatal follow-up, our maternity team keeps one consultant assigned to your case where possible, so you're not re-explaining your history at every visit.",
+      "commonlyManaged": ["Prenatal checkups and monitoring", "Delivery planning consultations", "Postnatal follow-up", "General women's health consultations"],
+      "approach": "We talk through delivery preferences early and revisit the plan together as the pregnancy progresses, not just in the final weeks.",
+      "relatedDoctorIds": ["dr-fatima-alsayed"],
+      "relatedBlogSlugs": ["preparing-first-prenatal-visit"]
+    },
+    {
+      "id": "emergency",
+      "slug": "emergency",
+      "name": "Emergency & Trauma Care",
+      "icon": "siren",
+      "summary": "Round-the-clock emergency assessment and stabilization, coordinated directly with the relevant specialty team.",
+      "overview": "Our emergency department is staffed for rapid assessment and stabilization, with a direct line to whichever specialty team a case needs next — cardiology, orthopedics, neurology — so handoffs happen fast.",
+      "commonlyManaged": ["Acute injury assessment", "Chest pain and breathing-difficulty triage", "Severe allergic reaction response", "Stabilization ahead of specialist handoff"],
+      "approach": "If you are in a real medical emergency, call your local emergency number immediately — do not use this website, or any website, to decide whether to seek emergency care.",
+      "relatedDoctorIds": ["dr-rohan-mehta"],
+      "relatedBlogSlugs": ["emergency-vs-urgent-care"]
+    }
+  ],
+  "moreSpecialties": [
+    { "name": "Oncology (Cancer Care)", "icon": "ribbon" },
+    { "name": "Nephrology & Dialysis", "icon": "kidney" },
+    { "name": "ENT (Ear, Nose & Throat)", "icon": "ear" },
+    { "name": "General & Internal Medicine", "icon": "stethoscope" },
+    { "name": "Dermatology", "icon": "skin" },
+    { "name": "Ophthalmology", "icon": "eye" }
+  ],
+  "disclaimer": "Department pages describe illustrative areas of care for a fictional hospital. Nothing here is medical advice, a diagnosis, or a treatment recommendation — always consult a qualified clinician, and call your local emergency number for any real emergency."
+}

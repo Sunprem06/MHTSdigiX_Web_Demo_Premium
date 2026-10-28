@@ -1,0 +1,18 @@
+{
+  "eyebrow": "Book an Appointment",
+  "heading": "Tell us what you need, and when.",
+  "body": "This is a demo form — nothing you enter is sent anywhere or stored beyond this page view. On a real deployment, this would route to the hospital's scheduling system.",
+  "departmentOptions": [
+    "Cardiology & Heart Care",
+    "Orthopedics & Joint Care",
+    "Neurology & Spine Care",
+    "Pediatrics & Child Health",
+    "Maternity & Women's Health",
+    "Emergency & Trauma Care",
+    "General & Internal Medicine",
+    "Not sure — please advise"
+  ],
+  "visitTypeOptions": ["New patient", "Returning patient", "Second opinion", "Follow-up visit"],
+  "preferredTimeOptions": ["Morning (9 AM – 12 PM)", "Afternoon (12 PM – 4 PM)", "Evening (4 PM – 8 PM)", "No preference"],
+  "successMessage": "Request received (demo only — nothing was actually sent). On a real deployment, our scheduling team would confirm your preferred slot within one business day."
+}

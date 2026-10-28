@@ -1,0 +1,31 @@
+{
+  "name": "beacon-ridge-hospital-premium",
+  "private": true,
+  "version": "0.1.0",
+  "description": "MHTSdigiXR showcase demo — Premium-tier multispecialty hospital website (fictional brand, no real hospital).",
+  "scripts": {
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
+    "start": "next start",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "^16.4.3",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "three": "^0.169.0",
+    "@react-three/fiber": "^9.8.2",
+    "@react-three/drei": "^10.7.9",
+    "gsap": "^3.12.5"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "@types/node": "^20.16.11",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.5",
+    "@types/three": "^0.169.0",
+    "tailwindcss": "^3.4.19",
+    "postcss": "^8.5.32",
+    "autoprefixer": "^10.4.20"
+  }
+}

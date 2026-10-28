@@ -1,0 +1,17 @@
+{
+  "eyebrow": "Insurance & Billing",
+  "heading": "Illustrative coverage & billing info.",
+  "intro": "Beacon Ridge is fictional, so the insurers below are invented names for demonstration only — never real insurance companies or real partnerships.",
+  "insurers": [
+    { "name": "Northfield Assurance (illustrative)", "note": "Cashless admission, illustrative" },
+    { "name": "Harbor Mutual Health (illustrative)", "note": "Reimbursement claims, illustrative" },
+    { "name": "Crestline Care Plans (illustrative)", "note": "Cashless admission, illustrative" },
+    { "name": "Summit Shield Insurance (illustrative)", "note": "Reimbursement claims, illustrative" }
+  ],
+  "billingFaq": [
+    { "question": "Do you offer cashless admission?", "answer": "Illustrative — a real hospital would list its actual network insurers and process here." },
+    { "question": "How do I get an itemized bill?", "answer": "On a real deployment, this would describe the actual billing-desk process. This concept demo doesn't generate real bills." },
+    { "question": "Can I pay in installments for a package?", "answer": "Illustrative placeholder — a real hospital's finance policy would be described here instead." }
+  ],
+  "disclaimer": "All insurer names above are fictional, invented for this concept demo. No real insurance company or partnership is implied."
+}

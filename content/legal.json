@@ -1,0 +1,20 @@
+{
+  "privacy": {
+    "heading": "Privacy Policy (placeholder)",
+    "intro": "This is a placeholder privacy policy for a MHTSdigiXR concept demo. Beacon Ridge Multispecialty Hospital is fictional and collects no real personal data — the forms on this site are demos and send nothing anywhere.",
+    "sections": [
+      { "title": "What this demo collects", "body": "Nothing. Form fields exist only to demonstrate validation and a success state; no data leaves your browser." },
+      { "title": "Cookies", "body": "This demo sets no analytics or tracking cookies." },
+      { "title": "A real deployment", "body": "A real hospital website would need a full privacy policy covering health-data handling consistent with applicable law (e.g. India's DPDP Act) before collecting any real patient information. That is out of scope for this concept demo." }
+    ]
+  },
+  "terms": {
+    "heading": "Terms of Use (placeholder)",
+    "intro": "This is a placeholder terms-of-use page for a MHTSdigiXR concept demo.",
+    "sections": [
+      { "title": "Demo content", "body": "Every page on this site describes a fictional hospital, fictional staff, and fictional content, created solely to demonstrate MHTSdigiXR's Premium-tier web design and development capability." },
+      { "title": "Not medical advice", "body": "Nothing on this site constitutes medical advice, diagnosis, or treatment. Always consult a qualified clinician, and call your local emergency number for any real emergency." },
+      { "title": "No real transactions", "body": "No appointment, inquiry, or purchase made through this site is real. All forms are simulated." }
+    ]
+  }
+}

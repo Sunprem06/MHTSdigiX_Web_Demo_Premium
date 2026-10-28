@@ -1,0 +1,14 @@
+{
+  "eyebrow": "Hospital Services",
+  "heading": "Everything around the consultation.",
+  "intro": "Beyond individual departments, Beacon Ridge coordinates the services that make a hospital visit actually work end to end.",
+  "services": [
+    { "title": "Diagnostics & Imaging", "description": "On-campus lab and imaging so most results are ready the same day, feeding directly into your consultant's notes.", "icon": "lab" },
+    { "title": "Pharmacy", "description": "An in-campus pharmacy that fills prescriptions written during your visit, so you don't need a separate stop.", "icon": "pharmacy" },
+    { "title": "Ambulance & Transfer", "description": "A dedicated ambulance bay for emergency arrivals and coordinated inter-hospital transfers when a case needs a different facility.", "icon": "ambulance" },
+    { "title": "Day Care & Short-Stay", "description": "A day-care ward for procedures that don't need an overnight admission, with the same follow-up coordination as inpatient care.", "icon": "bed" },
+    { "title": "Telehealth Follow-ups", "description": "Illustrative video follow-up consultations for patients who don't need to be back on campus in person.", "icon": "video" },
+    { "title": "Physiotherapy & Rehabilitation", "description": "In-house physiotherapy that picks up directly from orthopedics and neurology discharge plans.", "icon": "physio" }
+  ],
+  "disclaimer": "Services described here are illustrative of what a Premium-tier hospital website can showcase. Beacon Ridge is a fictional hospital; no real facility, equipment or capacity is implied."
+}

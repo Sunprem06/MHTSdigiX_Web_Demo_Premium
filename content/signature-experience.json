@@ -1,0 +1,23 @@
+{
+  "eyebrow": "The Beacon Ridge Experience",
+  "heading": "Composed care, in motion.",
+  "body": "Every department, every consultation and every follow-up is built around one idea: care that feels coordinated, not scattered. Scroll to see how the pieces come together.",
+  "fallbackNote": "Your browser can't render the interactive scene below, so here's a static version instead — nothing about the care described changes.",
+  "beats": [
+    {
+      "label": "Compassion",
+      "heading": "Heard before you're treated",
+      "body": "Every visit starts with time — time to explain, time to ask, time to understand what you're actually worried about."
+    },
+    {
+      "label": "Expertise",
+      "heading": "Specialists who talk to each other",
+      "body": "Our consultants across departments coordinate on shared cases, so your cardiologist and your physiotherapist are reading the same notes."
+    },
+    {
+      "label": "Facilities",
+      "heading": "A campus built for calm",
+      "body": "Daylight, quiet corners, and a layout designed so you spend less time wayfinding and more time actually resting."
+    }
+  ]
+}

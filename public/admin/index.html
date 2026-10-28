@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Beacon Ridge Multispecialty Hospital — Content Admin (Concept Demo)</title>
+  <!--
+    Pin the config.yml fetch to an absolute path. Decap otherwise resolves
+    "config.yml" relative to the current document URL, which only lands on
+    "/admin/config.yml" when the browser's address bar ends in a trailing
+    slash — and fighting Next.js's own trailing-slash redirect to guarantee
+    that produced a redirect loop (see MEMORY.md). An absolute path works
+    whether this page is reached via "/admin" or "/admin/".
+  -->
+  <link href="/admin/config.yml" type="text/yaml" rel="cms-config-url" />
+  <!--
+    This admin UI edits a MHTSdigiXR CAPABILITY-SHOWCASE DEMO. "Beacon Ridge
+    Multispecialty Hospital" is a fictional hospital — nothing edited here
+    represents a real facility, staff, or patient. See CLAUDE.md / MEMORY.md
+    in the repo for the full disclosure.
+
+    Real git-gateway login only works once this project is actually deployed
+    to Netlify with Identity + Git Gateway enabled in that site's dashboard —
+    see ARCHITECTURE.md "The CMS pattern". That has not been done for this
+    concept demo, so the login step below will not complete; this page still
+    loads and parses config.yml correctly, which is the bar this demo targets.
+  -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+  <script>
+    // Standard Decap CMS + Netlify Identity bootstrap: if a user completes
+    // the Identity invite/login flow from a link that lands them anywhere
+    // other than /admin/, send them back here so the CMS can pick up the
+    // session Git Gateway needs.
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", function (user) {
+        if (!user) {
+          window.netlifyIdentity.on("login", function () {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+</body>
+</html>

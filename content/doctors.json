@@ -1,0 +1,88 @@
+{
+  "eyebrow": "Our Doctors",
+  "heading": "Meet the (fictional) team.",
+  "intro": "Every profile below is an illustrative, fictional persona created for this concept demo — not a real clinician. No real names, photos, registration numbers, or board certifications are used.",
+  "doctors": [
+    {
+      "id": "dr-ananya-rao",
+      "name": "Dr. Ananya Rao",
+      "initials": "AR",
+      "department": "Cardiology & Heart Care",
+      "role": "Senior Consultant, Cardiology",
+      "experienceYears": "Illustrative — 15+ years",
+      "bio": "A fictional profile illustrating a senior cardiology consultant focused on preventive screening and structured post-procedure follow-up.",
+      "focusAreas": ["Preventive cardiology", "Hypertension management", "Post-procedure follow-up"]
+    },
+    {
+      "id": "dr-marcus-chen",
+      "name": "Dr. Marcus Chen",
+      "initials": "MC",
+      "department": "Orthopedics & Joint Care",
+      "role": "Senior Consultant, Orthopedics",
+      "experienceYears": "Illustrative — 18+ years",
+      "bio": "A fictional profile illustrating an orthopedic consultant who favors conservative treatment paths before recommending surgery.",
+      "focusAreas": ["Joint replacement planning", "Sports injuries", "Post-surgical rehabilitation"]
+    },
+    {
+      "id": "dr-priya-nair",
+      "name": "Dr. Priya Nair",
+      "initials": "PN",
+      "department": "Neurology & Spine Care",
+      "role": "Consultant, Neurology",
+      "experienceYears": "Illustrative — 10+ years",
+      "bio": "A fictional profile illustrating a neurology consultant who emphasizes structured assessment before imaging.",
+      "focusAreas": ["Headache and migraine care", "Nerve-pain evaluation", "Spine-related concerns"]
+    },
+    {
+      "id": "dr-daniel-osei",
+      "name": "Dr. Daniel Osei",
+      "initials": "DO",
+      "department": "Pediatrics & Child Health",
+      "role": "Senior Consultant, Pediatrics",
+      "experienceYears": "Illustrative — 12+ years",
+      "bio": "A fictional profile illustrating a pediatrician known for explaining every step directly to younger patients.",
+      "focusAreas": ["Child development checkups", "Vaccination scheduling", "Pediatric urgent care"]
+    },
+    {
+      "id": "dr-fatima-alsayed",
+      "name": "Dr. Fatima Al-Sayed",
+      "initials": "FA",
+      "department": "Maternity & Women's Health",
+      "role": "Senior Consultant, Obstetrics & Gynecology",
+      "experienceYears": "Illustrative — 14+ years",
+      "bio": "A fictional profile illustrating a maternity consultant who stays assigned to a patient's case across the full pregnancy where possible.",
+      "focusAreas": ["Prenatal care", "Delivery planning", "Postnatal follow-up"]
+    },
+    {
+      "id": "dr-rohan-mehta",
+      "name": "Dr. Rohan Mehta",
+      "initials": "RM",
+      "department": "Emergency & Trauma Care",
+      "role": "Head of Emergency Medicine",
+      "experienceYears": "Illustrative — 11+ years",
+      "bio": "A fictional profile illustrating an emergency-medicine lead focused on fast, accurate handoffs to specialty teams.",
+      "focusAreas": ["Acute triage", "Trauma stabilization", "Specialty-team handoff coordination"]
+    },
+    {
+      "id": "dr-lucia-fernandes",
+      "name": "Dr. Lucia Fernandes",
+      "initials": "LF",
+      "department": "General & Internal Medicine",
+      "role": "Senior Consultant, Internal Medicine",
+      "experienceYears": "Illustrative — 16+ years",
+      "bio": "A fictional profile illustrating an internal-medicine consultant who often serves as a patient's first point of contact across departments.",
+      "focusAreas": ["General health assessment", "Chronic condition management", "Specialist referral coordination"]
+    },
+    {
+      "id": "dr-wei-zhang",
+      "name": "Dr. Wei Zhang",
+      "initials": "WZ",
+      "department": "Nephrology & Dialysis",
+      "role": "Consultant, Nephrology",
+      "experienceYears": "Illustrative — 9+ years",
+      "bio": "A fictional profile illustrating a nephrology consultant focused on early kidney-function monitoring.",
+      "focusAreas": ["Kidney-function monitoring", "Dialysis care coordination", "Hypertension-related kidney care"]
+    }
+  ],
+  "disclaimer": "All doctor profiles on this page are fictional and illustrative, created for a MHTSdigiXR concept demo. They do not represent real clinicians, and no real medical credentials or registration numbers are used."
+}
