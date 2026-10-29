@@ -2,8 +2,9 @@ name = "beacon-ridge-cms-oauth"
 main = "worker.js"
 compatibility_date = "2026-10-29"
 
-# After `wrangler deploy`, bind this Worker to a custom route/domain in the
-# Cloudflare dashboard (Workers & Pages -> this worker -> Settings ->
-# Triggers -> Custom Domains), e.g. cms-auth.premium.mhtsdigixr.com, since
-# mhtsdigixr.com's DNS is already on Cloudflare. Then set that exact URL as
-# `base_url` in ../public/admin/config.yml.
+# Binds this Worker to cms-auth.premium.mhtsdigixr.com as a Custom Domain
+# (requires mhtsdigixr.com's zone to be on this same Cloudflare account —
+# it is). `wrangler deploy` creates the DNS record and the binding together.
+routes = [
+  { pattern = "cms-auth.premium.mhtsdigixr.com", custom_domain = true }
+]
