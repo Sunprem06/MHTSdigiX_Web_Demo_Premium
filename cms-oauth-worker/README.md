@@ -10,7 +10,7 @@ against GitHub from anywhere the site is hosted (Hostinger included). See
 1. **Create a GitHub OAuth App**
    GitHub -> Settings -> Developer settings -> OAuth Apps -> New OAuth App
    - Application name: `Beacon Ridge CMS (Premium)`
-   - Homepage URL: `https://demo.premium.mhtsdigixr.com`
+   - Homepage URL: `https://premium.mhtsdigixr.com`
    - Authorization callback URL: `https://cms-auth.premium.mhtsdigixr.com/callback`
      (use whatever domain you bind the Worker to in step 3 — must end in `/callback`)
    - Save, then generate a **Client Secret**. Keep both the Client ID and
@@ -51,7 +51,7 @@ against GitHub from anywhere the site is hosted (Hostinger included). See
 
 ## Verifying it works
 
-Visit `https://demo.premium.mhtsdigixr.com/admin/`, click "Login with GitHub".
+Visit `https://premium.mhtsdigixr.com/admin/`, click "Login with GitHub".
 You should get a GitHub authorize popup, then land back in the CMS UI signed
 in. A publish from the CMS commits directly to the `main` branch (editorial
 workflow is still configured — it opens a draft via a GitHub branch instead

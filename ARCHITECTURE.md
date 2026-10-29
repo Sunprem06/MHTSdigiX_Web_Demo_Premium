@@ -161,7 +161,7 @@ in a future session, regenerate per the `website-kickoff` skill's Step 4 and lin
 here under `docs/architecture/`.
 
 ## Hosting & deployment
-Live at `demo.premium.mhtsdigixr.com` on Hostinger Business Web Hosting, as a static export
+Live at `premium.mhtsdigixr.com` on Hostinger Business Web Hosting, as a static export
 (see `MEMORY.md` 2026-10-29). `next.config.mjs` sets `output: "export"`.
 
 To redeploy after a content/code change:

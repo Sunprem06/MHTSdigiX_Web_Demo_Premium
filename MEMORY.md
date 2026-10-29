@@ -62,7 +62,7 @@ Dated, append-only. Short entries; don't delete past ones.
   the Decap login screen with config.yml parsed successfully, no redirect loop, no config
   error. This looks like a latent bug in `Demo`'s merged pattern too (not something this
   project introduced) — worth a quick fix-forward there in a future session.
-- **2026-10-29** — Moved to Hostinger Business Web Hosting at `demo.premium.mhtsdigixr.com`,
+- **2026-10-29** — Moved to Hostinger Business Web Hosting at `premium.mhtsdigixr.com`,
   as a static export (`output: "export"` in `next.config.mjs`). Confirmed via `npm run build`
   all 31 routes are static/SSG with no API routes (same as the pre-move check). Two changes
   were required beyond the config flag:

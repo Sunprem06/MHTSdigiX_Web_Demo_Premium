@@ -21,8 +21,8 @@ publish_mode: editorial_workflow
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
 
-site_url: https://demo.premium.mhtsdigixr.com
-display_url: https://demo.premium.mhtsdigixr.com
+site_url: https://premium.mhtsdigixr.com
+display_url: https://premium.mhtsdigixr.com
 
 logo_url: ""
 
